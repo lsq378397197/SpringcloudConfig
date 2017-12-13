@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lsq378397197/SpringcloudConfig
+          searchPaths: repo
+#          username: 378397197@qq.com
+#          password: 102791qnhhx
+      label: master
+server:
+  port: 8888
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8889/eureka/
+#http://localhost:8888/config-client/dev/ 这个地址可以读到github上的配置
